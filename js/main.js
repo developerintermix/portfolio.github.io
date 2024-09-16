@@ -63,10 +63,31 @@ document.querySelectorAll('.scroll').forEach(button => {
 });
 
 
-document.querySelector('.hamburger').addEventListener('click', function() {
-    const nav = document.querySelector('.header__nav');
-    nav.classList.toggle('header__nav--active');
-});
+document.getElementById('colorSwitch').addEventListener('click', () => {
+    let colorValue = prompt('What color do you want');
+
+    if (colorValue === null || colorValue.trim() === '') {
+        return; 
+    }
+
+    colorValue = colorValue.trim();
+    if (isValidColor(colorValue)) {
+        console.log(colorValue)
+        // Apply the color to the theme color property --theme-color
+        document.documentElement.style.setProperty('--theme-color', colorValue);
+    } else {
+        // Alert the user if the color is invalid
+        alert('Probeer opnieuw daggoe');
+    }
+
+
+    function isValidColor(color) {
+        const s = new Option().style;
+        s.color = color;
+        return s.color !== '';
+    }
+    })
+
 
 
 

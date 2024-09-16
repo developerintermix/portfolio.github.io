@@ -7,6 +7,10 @@
     // border: 1px solid; /* Add 1px border to all elements */
 }
 
+:root {
+    --theme-color: #47dea2;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -15,7 +19,7 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     border-color: red; /* Red border for body */
 }
@@ -30,12 +34,14 @@ body {
 
     &__logo {
         font-size: 3rem;
-        color: #47dea2;
+        color: var(--theme-color);
+        background-color: transparent;
+        border: 0;
         font-weight: 800;
         cursor: pointer;
         transition: 0.5s ease;
         text-decoration: none;
-        border-color: yellow; /* Yellow border for logo */
+        // border-color: yellow; /* Yellow border for logo */
         
         &:hover {
             transform: scale(1.1);
@@ -70,7 +76,7 @@ body {
                 bottom: 0;
                 width: 0%;
                 height: 2px;
-                background-color: #47dea2;
+                background-color: var(--theme-color);
                 transition: width 0.3s ease-in-out;
             }
 
@@ -109,18 +115,7 @@ body {
                 text-align: center;
             }
         }
-
-        .hamburger {
-            display: flex;
-        }
-
-        // Show menu when active
-        .header__nav--active {
-            display: flex;
-        }
     }
-
-    
 }
 
 section {
@@ -133,7 +128,6 @@ section {
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: black;
     border-color: rgb(109, 128, 0); /* Purple border for home */
 
     &__content {
@@ -147,7 +141,7 @@ section {
         }
 
         span {
-            color: #47dea2;
+            color: var(--theme-color);
             border-color: lightgreen; /* Light green border for span */
         }
 
@@ -169,10 +163,10 @@ section {
             background-color: black;
             border-radius: 4rem;
             font-size: 1.6rem;
-            color: #47dea2;
+            color: var(--theme-color);
             letter-spacing: 0.3rem;
             font-weight: 600;
-            border: 2px solid #47dea2;
+            border: 2px solid var(--theme-color);
             transition: 0.3s ease;
             cursor: pointer;
             text-decoration: none;
@@ -180,9 +174,9 @@ section {
 
             &:hover {
                 transform: scale(1.03);
-                background-color: #47dea2;
+                background-color: var(--theme-color);
                 color: black;
-                box-shadow: 0 0 25px #47dea2;
+                box-shadow: 0 0 25px var(--theme-color);
             }
         }
 
@@ -206,6 +200,11 @@ section {
             border-radius: 50%;
             transition: 0.2s linear;
             border-color: teal; /* Teal border for home image */
+
+            &:hover {
+                box-shadow: 0 0 25px 15px var(--theme-color); 
+                transform: scale(1.03);
+            }
         }
     }
 
@@ -218,12 +217,12 @@ section {
             width: 4rem;
             height: 4rem;
             background-color: transparent;
-            border: 0.2rem solid #47dea2;
+            border: 0.2rem solid var(--theme-color);
             font-size: 2rem;
             border-radius: 50%;
             margin: 3rem 1.5rem 3rem 0;
             transition: 0.3s ease;
-            color: #47dea2;
+            color: var(--theme-color);
             text-decoration: none;
             // border-color: violet; /* Violet border for content icons */
 
@@ -234,8 +233,8 @@ section {
             &:hover {
                 color: black;
                 transform: scale(1.3) translateY(-5px);
-                background-color: #47dea2;
-                box-shadow: 0  0 25px #47dea2;
+                background-color: var(--theme-color);
+                box-shadow: 0  0 25px var(--theme-color);
             }
         }
     }
@@ -250,7 +249,7 @@ section {
     h1 {
         display: flex;
         justify-content: center;
-        color: #47dea2;
+        color: var(--theme-color);
         font-size: 3.5rem;
         font-weight: 700;
         line-height: 1.4;
@@ -310,14 +309,17 @@ section {
 
                 &:hover {
                     transform: scale(1.1);
+
+                    span {
+                        color: var(--theme-color);
+                    }
                 }
 
                 a {
                     font-size: 1.25rem;
-                    color: #47dea2;
+                    color: var(--theme-color);
                     text-decoration: none;
                 }
-
             }
         }
     }
@@ -331,7 +333,7 @@ section {
     h1 {
         display: flex;
         justify-content: center;
-        color: #47dea2;
+        color: var(--theme-color);
         font-size: 3.5rem;
         font-weight: 700;
         line-height: 1.4;
@@ -365,16 +367,16 @@ section {
                 justify-content: center;
                 text-decoration: none;
                 font-size: 1.25rem;
-                color: #47dea2;
-                border: 1px solid #47dea2;
+                color: var(--theme-color);
+                border: 1px solid var(--theme-color);
                 width: 60%;
                 margin: 0 auto;
                 border-radius: 10px;
 
                 &:hover {
                     color: black;
-                    background-color: #47dea2;
-                    box-shadow: 0  0 25px #47dea2;
+                    background-color: var(--theme-color);
+                    box-shadow: 0  0 25px var(--theme-color);
                     
                 }
             }
@@ -389,7 +391,7 @@ section {
     h1 {
         display: flex;
         justify-content: center;
-        color: #47dea2;
+        color: var(--theme-color);
         font-size: 3.5rem;
         font-weight: 700;
         line-height: 1.4;
