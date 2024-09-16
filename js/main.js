@@ -63,4 +63,10 @@ document.querySelectorAll('.scroll').forEach(button => {
 });
 
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+    const nav = document.querySelector('.header__nav');
+    nav.classList.toggle('header__nav--active');
+});
+
+
 

@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -78,6 +79,48 @@ body {
             }
         }
     }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &__line {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+        }
+    }
+    @media (max-width: 376px) {
+        .header__nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 1rem;
+
+            .nav__item {
+                padding: 1rem 0;
+                text-align: center;
+            }
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        // Show menu when active
+        .header__nav--active {
+            display: flex;
+        }
+    }
+
+    
 }
 
 section {
@@ -300,7 +343,7 @@ section {
         justify-content: space-between; 
         list-style: none;
         padding: 2rem 1rem 0 1rem;
-        gap: 1rem; 
+        row-gap: 5rem; 
 
         .content__item {
 
@@ -354,5 +397,16 @@ section {
     }
 }
 
+.line {
+    position: relative;
+    border-bottom: 1px solid hsl(230, 9%, 25%);
+    width: 100%;
+    margin-left: 64px;
+    margin-top: 23.5px;
+    margin-bottom: 23.5px;
+  }
+
+
+  
 
 
